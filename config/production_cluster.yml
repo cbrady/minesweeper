@@ -3,4 +3,4 @@ cwd: /var/www/vhosts/minesweeper.com/mine_sweeper/current
 port: "8000"
 environment: production
 pid_file: log/mongrel.pid
-servers: 3
+servers: 1
