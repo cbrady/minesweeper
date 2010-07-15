@@ -23,6 +23,13 @@ Rails::Initializer.run do |config|
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
+  
+  config.action_controller.session_store = :active_record_store
+    config.action_controller.session = {
+       :session_key => 'sessions',
+       :secret      => '85bd76b6808c3a448c7e1578c244f739494505014eb83f57764b51143b35530f28332e2e6b8b0c0bcba0f5c89fd8e58687c49064c5116af2c78332c5a0cc41ea'
+     }
+  
 
   # Skip frameworks you're not going to use. To use Rails without a database,
   # you must remove the Active Record framework.
